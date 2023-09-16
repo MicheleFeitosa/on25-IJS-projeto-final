@@ -1,8 +1,8 @@
-# Desperdício Zero: Uma Abordagem Sustentável para o Gerenciamento de Alimentos
+# Despensa Inteligente: Uma Abordagem Sustentável para o Gerenciamento de Alimentos
 Projeto Final da Imersão JavaScript da {Reprograma}
 
 # Proposta 
-O projeto "Desperdício Zero" tem como objetivo auxiliar no combate a um dos maiores problemas enfrentados atualmente: o desperdício de alimentos. A finalizade é oferecer  uma forma prática para ajudar as pessoas e seus estabelecimentos a gerenciar seus alimentos de forma consciente e sustentável.
+O projeto "Despensa Inteligente" tem como objetivo auxiliar no combate a um dos maiores problemas enfrentados atualmente: o desperdício de alimentos. A finalizade é oferecer  uma forma prática para ajudar as pessoas e/ou seus estabelecimentos a gerenciar seus alimentos de forma consciente e sustentável.
 
 # Detalhes do projeto 
 Despensa Inteligente: pra cadastrar e gerenciar os alimentos mantendo o controle das datas de validade.
