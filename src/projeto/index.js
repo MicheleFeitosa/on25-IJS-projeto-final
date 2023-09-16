@@ -5,10 +5,10 @@ import Usuario from './usuario.js';
 // roteiro do projeto 
 
 // cadastrar um alimento
-const banana = new Alimento("Banana", "Frutas", new Date(2023, 12, 11));
-const leite = new Alimento("Leite", "Laticínios", new Date(2023, 11, 8));
-const pao = new Alimento("Pão", "Cereais", new Date(2023, 8, 10));
-const iogurte = new Alimento("iogurte", "laticínios", new Date(2023, 10, 21))
+const banana = new Alimento("Banana", "Frutas", new Date(2023, 11, 11)); 
+const leite = new Alimento("Leite", "Laticínios", new Date(2023, 10, 8)); 
+const pao = new Alimento("Pão", "Cereais", new Date(2023, 7, 10)); 
+const iogurte = new Alimento("iogurte", "Laticínios", new Date(2023, 9, 21)); 
 
 // Criando um usuário
 const michele = new Usuario("Michele", 12345);
@@ -23,7 +23,8 @@ michele.adicionarAlimentoNaDespensa(iogurte);
 
 const alimentosPertoDeVencer = michele.verificarAlimentosPertoDeVencer();
 
-alimentosPertoDeVencer.forEach(alimento => {
-  console.log(`Nome: ${alimento.nome}, Grupo: ${alimento.grupo}, Data de Validade: ${alimento.dataValidade.toLocaleDateString()}, Mensagem: ${alimento.mensagem}`);
-});
+alimentosPertoDeVencer.forEach(({ alimento, mensagem }) => {
+    console.log(`Nome: ${alimento.nome}, Grupo: ${alimento.grupo}, Data de Validade: ${alimento.dataValidade.toLocaleDateString()}, Mensagem: ${mensagem}`);
+  });
 
+  console.log(alimentosPertoDeVencer)

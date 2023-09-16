@@ -1,5 +1,3 @@
-import Alimento from './alimento.js'; 
-
   class Despensa {
     constructor() {
       this.itens = [];
@@ -11,21 +9,23 @@ import Alimento from './alimento.js';
   
     verificarValidade() {
       const dataAtual = new Date();
-      const dataLimite = new Date();
-      dataLimite.setMonth(dataAtual.getMonth() + 1); // Adiciona 1 mês à data atual
-  
-      const alimentosPertoDeVencer = this.itens.filter(alimento => alimento.dataValidade > dataAtual && alimento.dataValidade <= dataLimite);
-  
-      return alimentosPertoDeVencer.map(alimento => {
+      const dataLimite = new Date(dataAtual);
+      dataLimite.setMonth(dataLimite.getMonth() + 1);
+    
+      const alimentosPertoDeVencer = this.itens.filter(alimento => {
         const diasRestantes = Math.ceil((alimento.dataValidade - dataAtual) / (1000 * 60 * 60 * 24));
-        return {
-          alimento,
-          mensagem: `O alimento "${alimento.nome}" está perto de vencer em ${diasRestantes} dias.`
-        };
+        return diasRestantes >= 1 && diasRestantes <= 7;
       });
+    
+      return alimentosPertoDeVencer.map(alimento => ({
+        alimento,
+        mensagem: `O alimento "${alimento.nome}" está perto de vencer em 
+        ${Math.ceil((alimento.dataValidade - dataAtual) / (1000 * 60 * 60 * 24))} dias.`,
+      }));
     }
-  }
+  }      
   
   export default Despensa;
+  
   
   

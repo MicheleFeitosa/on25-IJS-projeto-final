@@ -13,7 +13,9 @@ class Usuario {
   
     verificarAlimentosPertoDeVencer() {
       return this.despensa.verificarValidade();
+      
     }
   }
 
+  
   export default Usuario;

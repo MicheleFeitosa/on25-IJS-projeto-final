@@ -7,3 +7,7 @@ class Alimento {
   }
   
   export default Alimento;
+
+
+
+  
